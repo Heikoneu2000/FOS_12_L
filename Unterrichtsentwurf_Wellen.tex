@@ -1,0 +1,85 @@
+\documentclass[10pt,paper=A4,paper=landscape,headinclude=true,DIV=20]{scrartcl}
+%\usepackage[a4paper, landscape, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage[ngerman]{babel}
+%\usepackage{arev}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{uarial}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{siunitx}
+\usepackage[headsepline]{scrlayer-scrpage}
+\usepackage{graphicx}
+\pagestyle{scrheadings}
+\usepackage{xltabular}
+\sisetup{locale = DE}
+\usepackage{multirow}
+\usepackage{hyperref}
+%\usepackage{lscape}
+% \usepackage{longtable}
+\newcommand{\phyphox}{\textit{phyphox} }
+\DeclareUnicodeCharacter{226}{\tests}
+\newcommand{\zeit}[2]{#1 \newline \newline #2'}
+\begin{document}
+\begin{flushright}
+Name: Heiko Schröter\\
+\end{flushright}
+\vspace{0em}
+\begin{tabularx}{1\textwidth}{|X|X|X|}
+\hline
+\multicolumn{3}{|>{\bfseries\Large}X|}{ \vspace{0em}Unterrichtsentwurf}                                                                                                                                                                                                                                                                                                                                                                            \\                                                        
+\hline
+Richard-Hartmann-Schule & LF/Fach: & Thema: \\
+Berufliches Schulzentrum &  & Einführung \\
+für Technik III, Chemnitz & Angewandte Physik & Mechanische Wellen \\
+\hline 
+Klasse: & Planung einer Unterrichtseinheit:  & Datum:  \\ 
+&&\\
+FOS 12 & 90 min & 18. März 2021\\
+\hline 
+\end{tabularx}\label{tab}
+\\\\ \vspace{1em}
+\textbf{Ziel: Einführung in die mechanischen Wellen}
+\begin{itemize}
+\item Berechnung der Zeit die bleibt, um sich vor den gefährlichen Oberflächenwellen eines Erdbebens in Sicherheit zu bringen.
+\item Wir nennen Gemeinsamkeit und Unterschied von Schwingung und Wellen.
+\item Welche Wellenarten gibt es und wodurch sind sie gekennzeichnet?
+\item Wie hängen Wellenlänge und Ausbreitungsgeschwindigkeit zusammen?
+\item Wir ermitteln die Ausbreitungsgeschwindigkeit einer Schallwelle in Luft.
+\item Wie kann eine Welle mathematisch beschrieben und dargestellt werden?
+\item Berechnung der Zeit zwischen den schnellen Transversal- und Longitudinal-wellen und den Oberflächenwellen bei einem Erdbeben.
+\end{itemize}
+% eingefühte Tabelle
+\begin{xltabular}{1\textwidth}{|p{2.4em}|p{14cm}|p{6cm}|X|}
+\hline 
+Zeit & Inhalt & Methodisch-didaktisches Vorgehen & {Notizen/ \newline Bemerkungen} \\
+\hline\endhead
+\zeit{9:00}{5}& \textbf{Stundeneröffnung} Begrüßung und Erläuterung des Stundenziels & LV $\rightarrow$ Beamer &\\
+\hline
+\zeit{9:05}{5}& \textbf{Einstieg} Vorführung der Simulation eines realen Erdbebens & LV $\rightarrow$ Beamer & \url{http://ds.iris.edu/seismon/swaves/index.php} \\
+\hline
+\zeit{9:10}{15}& \textbf{Stoffvermittlung} Gemeinsamkeit und Unterschied von Schwingung und Welle (Simulation eines gekoppelten Pendels, Erweiterung auf mehrere Schwinger, mathematische Beschreibung der fortschreitenden Welle und grafische Darstellung, physikalische Größen Wellenlänge $\lambda$ und Ausbreitungsgeschwindigkeit $c$ & LV $\rightarrow$ Beamer & \url{https://www.walter-fendt.de/html5/phde/coupledpendula_de.htm}, Demoexperiment Stabschwinger, \textit{gnuplot}\footnote{Gnuplot ist ein skript- bzw. kommandozeilengesteuertes Computerprogramm zur grafischen Darstellung von Messdaten und mathematischen Funktionen (Funktionenplotter).} \\
+\hline
+\zeit{9:25}{10}& \textbf{Stoffvermittlung} Wellenarten (Transversal-wellen, Longitudinal-wellen, Oberflächenwellen) & LV $\rightarrow$ Beamer & Demoexperiment Spiralfeder \\
+\hline
+\zeit{9:35}{5}& \textbf{Stoffvermittlung} Zusammenhang Ausbreitungsgeschwindigkeit und Wellenlänge \newline $c=\dfrac{\lambda}{T}\quad f=\dfrac{1}{T}$ & LV $\rightarrow$ Beamer & \\
+\hline
+\zeit{9:40}{20}& \textbf{Sicherung} Ausbreitungsgeschwindigkeit von mechanischen Wellen (Experiment Bestimmung der Schallgeschwindigkeit mit APP \textit{Phyphox}\footnote{Die App \phyphox wird von der RWTH Aachen entwickelt und steht allen Interessierten \textbf{kostenlos} zur Verfügung. \phyphox macht es möglich, mit den Sensoren des Smartphones zu experimentieren, Messwerte aufzunehmen und auszuwerten.}  & GA & Arbeitsblatt, Smartphone \\
+\hline
+
+\zeit{10:00}{10}& \textbf{Sicherung} Berechnung der Wellenlänge einer Schallwelle & EA, Tafel & Übungsaufgabe \\
+\hline
+\zeit{10:10}{10}& \textbf{Stoffvermittlung} Mathematische Beschreibung einer Welle $y(x,t)=\hat{y}\cdot\sin\left\lbrace \omega\cdot\left(t-\dfrac{x}{c}\right)\right\rbrace=\hat{y}\cdot\sin(\omega t-k t)$ (graphische Darstellung mittels \textit{gnuplot}) & LV $\rightarrow$ Beamer & nur bei Bedarf als Puffer\\
+\hline
+\zeit{10:20}{5}& \textbf{Sicherung} Beispielaufgabe: Berechnung der Zeit zwischen den schnellen Transversal-wellen und Longitudinal-wellen und den langsameren Oberflächenwellen beim Erdbeben & EA, Tafel & Beispielaufgabe evtl. als Hausaufgabe \\
+\hline
+\zeit{10:25}{5}& Fragen/ Wiederholung/ Feedback & &\\
+\hline
+\zeit{10:30}{0}& Pause & &\\
+\hline
+\end{xltabular}
+
+\end{document}
