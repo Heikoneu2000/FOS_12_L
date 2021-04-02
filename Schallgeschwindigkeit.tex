@@ -1,5 +1,5 @@
 \documentclass[12pt,oneside]{scrartcl}
-\usepackage[a4paper, left=2.5cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage[a4paper, left=2.5cm, right=2cm, top=5.5cm, bottom=2.5cm]{geometry}
 \usepackage[ngerman]{babel}
 \usepackage{color}
 \usepackage[utf8]{inputenc}
@@ -10,21 +10,48 @@
 \usepackage{graphicx}
 \usepackage{pgfplots}
 \usepackage{hyperref}
-\usepackage[headsepline]{scrlayer-scrpage}
-\pagestyle{scrheadings}
 \sisetup{locale = DE}
 \newcommand{\phyphox}{\textit{phyphox} }
-%\usepackage{biblatex}
-%\addbibresource{Schallgeschwindigkeit.bib}
+\usepackage{biblatex}
+\usepackage{xltabular}
+\addbibresource{Schallgeschwindigkeit.bib}
+\usepackage{scrlayer-scrpage}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\DeclareNewLayer[%
+  background,% Hintergrundebene
+  width=\textwidth,% Größe und Position des Textbereichs
+  hoffset=2.5cm,
+  voffset=2.5cm,
+  align=tl,
+  contents={%
+  \sffamily
+    \setlength{\fboxsep}{2mm}% Abstand Box Text
+    \setlength{\fboxrule}{.5mm}% Dicke Linie
+    % vertikale Position korrigieren    
+    \vskip-\fboxsep\vskip-\fboxrule\vskip-\baselineskip
+    % horizontale Position korrigieren
+    \hspace{-\fboxsep}\hspace{-\fboxrule}%
+        
+    \begin{tabularx}{\textwidth}{|>{\bfseries\Large}C{7cm}|X|X|}                                                       
+\hline
+\vspace{0em}\includegraphics[scale=0.3]{logo2.png} & Name: & Datum: \\
+\hline
+
+\end{tabularx}
+    %\makebox[\layerwidth][l]{%
+    %  \fbox{\rule{0pt}{\layerheight}\rule{\layerwidth}{0pt}}% Rahmen
+    %}%
+  }
+]{frame}
+\AddLayersToPageStyle{@everystyle@}{frame}
 
 \begin{document}
-\ihead{\Large Name:}
-\ohead{\Large Datum:\hspace{5cm}}
+\sffamily
+
 \title{Mechanische Wellen}
 \subtitle{Experiment Bestimmung der Schallgeschwindigkeit}
 \date{}
 \maketitle
-\thispagestyle{headings}
 \section*{Versuchsbeschreibung}
 Mit zwei Smartphones kann zusammen mit einer zweiten Person im Unterricht oder zu Hause die Schallgeschwindigkeit bestimmt werden. Die App \phyphox\footnote{Die App \phyphox wird von der RWTH Aachen entwickelt und steht allen Interessierten \textbf{kostenlos} zur Verfügung. \phyphox ermöglicht es dir, mit den Sensoren deines Smartphones zu experimentieren, Messwerte aufzunehmen und auszuwerten.}  auf den beiden Smartphones bestimmt dabei die Zeitspanne, die der Schall benötigt, um eine vorgegebene Strecke zu durchlaufen.
 \section*{Material}
@@ -116,7 +143,7 @@ Messung Nr. & Zeitspanne A  & Zeitspanne B & Schallgeschwindigkeit \\
   \end{description}
 
 \item Bezeichnen wir mit $x_A$ den Ort von Smartphone A und mit $x_B$ den Ort von Smartphone B, dann ist $s = x_B - x_a$ der Abstand der beiden Smartphones.\\\\
-Bezeichnen wir weiter mit $t_{A,Start}$ den Zeitpunkt des Starts von Smartphone A, $t_{B,Start}$ den Zeitpunkt des Starts von Smartphone B, $t_{A,Stop}$ den Zeitpunkt des Stopps von Smartphone A und $t_{B,Stop}$ den Zeitpunkt des Stopps von Smartphone B, dann ist $\Delta t_A = t_{A,Stop} - t_{A,Start}$ die Zeitspanne, die Smartphone A misst und $\Delta t_B = t_{B,Stop} - t_{B,Start}$ die Zeitspanne, die Smartphone B misst.\newpage
+Bezeichnen wir weiter mit $t_{A,Start}$ den Zeitpunkt des Starts von Smartphone A, $t_{B,Start}$ den Zeitpunkt des Starts von Smartphone B, $t_{A,Stop}$ den Zeitpunkt des Stopps von Smartphone A und $t_{B,Stop}$ den Zeitpunkt des Stopps von Smartphone B, dann ist $\Delta t_A = t_{A,Stop} - t_{A,Start}$ die Zeitspanne, die Smartphone A misst und $\Delta t_B = t_{B,Stop} - t_{B,Start}$ die Zeitspanne, die Smartphone B misst.
 Bezeichnen wir schließlich mit $\Delta t$ die Zeitspanne, die der Schall benötigt, um von Smartphone A zu Smartphone B (und umgekehrt) zu gelangen, so entnimmt man aus dem $t-x$-Diagramm
 \begin{align*}
 \Delta t_A&=\Delta t+\Delta t_B +\Delta t\\

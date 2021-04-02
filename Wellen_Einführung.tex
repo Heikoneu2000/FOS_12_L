@@ -15,7 +15,6 @@ per-mode = fraction}
 \usecolortheme{crane}
 \usepackage{wrapfig}
 \usepackage{animate}
-%\usepackage{movie15}
 
 \title{Unterrichtseinheit zu Wellen}
 \subtitle{Einführung in die mechanischen Wellen}
@@ -32,7 +31,7 @@ per-mode = fraction}
 {
   \frametitle{Simulation eines Erdbebens}
   \textbf{Ein Beispiel für mechanische Wellen und deren Ausbreitung}
-	\begin{wrapfigure}{l}{3.5cm}
+	\begin{wrapfigure}{l}{4cm}
 	\includegraphics[scale=0.15]{iris}
 	\end{wrapfigure}
 	\begin{itemize}
@@ -43,7 +42,6 @@ per-mode = fraction}
 	\item Seismografen registrieren die Bewegung
 	\end{itemize}
 	\url{http://ds.iris.edu/seismon/swaves/}
-	\href{file:///home/heikoneu/Dokumente/latex/FOS_12_L/videos/2021-03-14 15-57-49.mp4}{Tokio 2011} \quad \href{file:///home/heikoneu/Dokumente/latex/FOS_12_L/videos/Nepal_2015.mp4}{Nepal 2015}
 }
 
 \frame
@@ -64,7 +62,7 @@ per-mode = fraction}
 {
   \frametitle{Von der Schwingung zur Welle}
   \textbf{Gekoppelte Pendel}
-	\begin{wrapfigure}{l}{3.5cm}
+	\begin{wrapfigure}{l}{4cm}
 	\includegraphics[scale=0.2]{Pendel_gekoppelt}
 	\end{wrapfigure}
 	\begin{itemize}
@@ -74,13 +72,16 @@ per-mode = fraction}
 	\item Und umgekehrt (2. Pendel $\rightarrow$ 1. Pendel)
 	\item mathematisch dargestellt im Auslenkungs-Zeit-Diagramm
 	\end{itemize}
-	\url{https://www.walter-fendt.de/html5/phde/coupledpendula_de.htm}\quad \href{file:///home/heikoneu/Dokumente/latex/FOS_12_L/videos/gekoppelte_Pendel.mp4}{Simulation}
+	\url{https://www.walter-fendt.de/html5/phde/coupledpendula_de.htm}
 }
 
 \frame[allowframebreaks]
 {
   \frametitle{Erweiterung auf mehrere Schwinger}
   \textbf{Wellenmaschine mehrere gekoppelte Elemente}
+	%\begin{wrapfigure}{l}{4cm}
+	%\animategraphics[loop, autoplay, width=4cm]{25}{Wavemachine-}{148}{0}
+	%\end{wrapfigure}
 	\begin{itemize}
 	\item Kopplung mehrerer Schwinger
 	\item Schwingung breitet sich im Raum aus
@@ -88,11 +89,6 @@ per-mode = fraction}
 	\item Zusätzlich \textbf{räumlich} periodische Änderung $\rightarrow$ Welle
 	\item Energie wird übertragen, kein Stoff
 	\end{itemize}
-	\begin{wrapfigure}{l}{4cm}
-	%\animategraphics[loop, autoplay, width=4cm]{25}{Bilder/Wavemachine-}{148}{0}
-		\includegraphics[scale=0.8]{Bilder/Wavemachine-0.png}
-		\href{file:///home/heikoneu/Dokumente/latex/FOS_12_L/Bilder/Wavemachine.gif}{Animation starten}
-	\end{wrapfigure}
 	\begin{block}{Definition}
 	Eine mechanische Welle ist die Ausbreitung einer mechanischen Schwingung im Raum.
 	\end{block}
@@ -123,7 +119,7 @@ per-mode = fraction}
 
 \frame
 {
-  \frametitle{Ausbreitung einer Welle}
+  \frametitle{Ausbreitung einer Wellen}
   Momentaufnahmen einer Welle zu unterschiedlichen Zeiten
   \begin{tikzpicture}
   	\foreach \y in {0, ..., 8} {
@@ -147,17 +143,11 @@ per-mode = fraction}
 	Formelzeichen: $\lambda$\\
 	Einheit: ein Meter (\SI{1}{\meter})
 	\end{block}
-	\newpage
-	\begin{block}{Ausbreitungsgeschwindigkeit}
-	Die Ausbreitungsgeschwindigkeit einer Welle ist die Geschwindigkeit, mit der sich eine bestimmte Phase im Raum ausbreitet.\\
-	Formelzeichen: v\\
-	Einheit: ein Meter durch Sekunde (\SI{1}{\meter\per\second})
-	\end{block}
 }
 
 \frame
 {
-  \frametitle{Eine harmonische Welle}
+  \frametitle{Eine Harmonische Welle}
   \begin{block}{y-x-Diagramm}
   \begin{tikzpicture}
 	\draw[scale=0.3, domain=0:26/5*pi, smooth, blue, variable=\x, samples=50] plot ({\x}, {2*sin(deg(\x});
@@ -180,7 +170,6 @@ per-mode = fraction}
     \draw[<->, >=latex, red] (5*pi/4*0.6,3*0.3) -- node [above] {$T$} (9*pi/4*0.6,3*0.3) ;
   \end{tikzpicture}
   \end{block}
-  \href{file:///home/heikoneu/Dokumente/Gnuplot/Schwingung.gif}{Animation starten}
 }
 
 \frame[allowframebreaks]
@@ -191,7 +180,7 @@ per-mode = fraction}
 	\end{figure}
   \frametitle{Graphische Darstellung der Wellenmaschine}
 %\url{file:///C:/Users/Denise_Heiko/Documents/latex/Gnuplot/Wellenmaschine.gif} 
-\href{file:///home/heikoneu/Dokumente/Gnuplot/wellenmaschine.gif}{Animation starten}
+\href{Wellenmaschine.gif}{Animation starten}
 }
 
 \frame[allowframebreaks]
@@ -229,7 +218,7 @@ per-mode = fraction}
 		\includegraphics[scale=0.1]{kreiswellen.jpg}
 		\caption{Darstellung von Kreiswellen}
 	\end{figure}
-	\href{file:///home/heikoneu/Dokumente/Gnuplot/wasser.gif}{Animation starten}
+	\href{wasser.gif}{Animation starten}
 }
 
 \frame
@@ -251,12 +240,12 @@ per-mode = fraction}
 \frame
 {
   \frametitle{Ausbreitungsgeschwindigkeit von Schallwellen}
-	Mit zwei Smartphones kann die Schallgeschwindigkeit gemessen werden. Die App \textit{phyphox} \footnote{Die App \textit{phyphox} wird von der RWTH Aachen entwickelt und steht allen Interessierten \textbf{kostenlos} zur Verfügung. \textit{phyphox} ermöglicht es dir, mit den Sensoren deines Smartphones zu experimentieren, Messwerte aufzunehmen und auszuwerten.} auf den beiden Smartphones bestimmt dabei die Zeitspanne, die der Schall benötigt, um eine vorgegebene Strecke zu durchlaufen.\\
+	Mit zwei Smartphones kann die Schallgeschwindigkeit gemessen werden. Die App \textit{phyphox} auf den beiden Smartphones bestimmt dabei die Zeitspanne, die der Schall benötigt, um eine vorgegebene Strecke zu durchlaufen.\\
 \url{https://www.youtube.com/watch?v=-XSTRqhJ6MQ}\\
 $\rightarrow$ Durchführung des Versuches
 }
 
-\frame[allowframebreaks]
+\frame
 {
 \frametitle{Beispielaufgabe 1 Wellenlänge Schallwelle}
 \textbf{Aufgabe:} Die vom menschlichen Ohr wahrnehmbaren Schallwellen haben eine Frequenz zwischen ca. \SI{20}{\hertz} und \SI{20000}{\hertz} und die Schallgeschwindigkeit beträgt ca. \SI{340}{\meter\per\second}.\\
@@ -264,47 +253,87 @@ $\rightarrow$ Durchführung des Versuches
 	\item Berechnen Sie die Wellenlänge $\lambda$ einer Schallwelle bei $f=\SI{1000}{\hertz}$.
 	\item Wie groß ist die Periodendauer in diesem Fall?
 \end{enumerate}
-\newpage
+}
+\frame
+{
 \textbf{Lösung:}
 \begin{enumerate}
 \item 
-\begin{align*}
-v=\lambda\cdot f\Rightarrow\lambda=\dfrac{v}{f}=\dfrac{\SI{340}{\meter\per\second}}{\SI{1000}{\per\second}}=\SI{0,34}{\meter}
-\end{align*}
-\item\begin{align*}
-T&=\dfrac{1}{f}=\dfrac{1}{\SI{1000}{\per\second}}=\SI{0,001}{\second}\quad\text{bzw.}\\
-v=\dfrac{\lambda}{T}\Rightarrow T&=\dfrac{\lambda}{v}=\dfrac{\SI{0,34}{\meter}}{\SI{340}{\meter\per\second}}=\SI{0,001}{\second}
-\end{align*}
+	\begin{align*}
+	v=\lambda\cdot f\Rightarrow\lambda=\dfrac{v}{f}=\dfrac{\SI{340}{\meter\per\second}}{\SI{1000}{\per\second}}=\SI{0,34}{\meter}
+	\end{align*}
+	\newpage
+\item
+	\begin{align*}
+	T&=\dfrac{1}{f}=\dfrac{1}{\SI{1000}{\per\second}}=\SI{0,001}{\second}\quad\text{bzw.}\\
+	v=\dfrac{\lambda}{T}\Rightarrow T&=\dfrac{\lambda}{v}=\dfrac{\SI{0,34}{\meter}}{\SI{340}{\meter\per\second}}=\SI{0,001}{\second}
+	\end{align*}
 \end{enumerate}
 }
 
-\frame[allowframebreaks]
+\frame
 {
 \frametitle{Beispielaufgabe 2 Wellenlänge Schallwelle}
+\uncover<1->
+{
 \textbf{Aufgabe:} Welche Frequenz hat ein Erreger, der in Luft ($v=\SI{340}{\meter\per\second}$) eine Schallwelle mit der Wellenlänge \SI{20}{\centi\meter} erzeugt?\\
-\newpage
+}
+\uncover<2->
+{
 \textbf{Lösung:}
 \begin{align*}
 v=\lambda\cdot f\Rightarrow f=\dfrac{v}{\lambda}=\dfrac{\SI{340}{\meter\per\second}}{\SI{20}{\centi\meter}}=\dfrac{\SI{340}{\meter\per\second}}{\SI{0,20}{\meter}}=\SI{1700}{\per\second}
 \end{align*}
 }
+}
 
-\frame[allowframebreaks]
+\frame
 {
 \frametitle{Beispielaufgabe 3 Wellenlänge Schallwelle}
+\uncover<1->
+{
 \textbf{Aufgabe:} Bei einer Echolotmessung sendet eine Schallquelle ($f=\SI{40000}{\hertz}$) unter Wasser Schallwellen mit der Wellenlänge $\lambda=\SI{3,7}{\centi\meter}$ aus. Wie groß ist die Ausbreitungsgeschwindigkeit des Schalls in Wasser?\\
-\newpage
+}
+\uncover<2->
+{
 \textbf{Lösung:}
 \begin{align*}
 v=\lambda\cdot f=\SI{3,7}{\centi\meter}\cdot\SI{40000}{\hertz}=\SI{0,037}{\meter}\cdot\SI{40000}{\per\second}=\SI{1480}{\meter\per\second}
 \end{align*}
 }
+}
 
-\frame[allowframebreaks]
+\frame
 {
 \frametitle{Beispielaufgabe 4 Erdbeben}
+\uncover<1->
+{
 \textbf{Aufgabe:} Im Jahr 1985 ereignete sich in Mexiko ein schweres Erdbeben. Das Epizentrum lag \SI{340}{\kilo\meter} von Mexiko City entfernt. Zunächst trafen in der Hauptstadt die P-Wellen ein, die sich mit einer Geschwindigkeit von \SI{6}{\kilo\meter\per\second} ausbreiten. Berechnen Sie die Zeit, die den Bewohnern blieb, um sich vor den gefährlichen Oberflächenwellen ($v=\SI{3}{\kilo\meter\per\second}$) in Sicherheit zu bringen.\\
-\newpage
+}
+
+\uncover<2->
+{
+\textbf{Lösung:}
+  \begin{tikzpicture}[scale = 0.07]
+	\draw[smooth, red,] (0,0) -- node [above, rotate=17] {$v_O=\SI{3}{\kilo\meter\per\second}$} (112,34.0);
+	\draw[smooth, blue,] (0,0) -- node [above, rotate=34] {$v_P=\SI{6}{\kilo\meter\per\second}$}(56,34.0);
+	\draw[->, >=latex] (0,0) node [left] {Epizentrum} -- (120,0) node [below] {$t$};
+    \draw[->, >=latex] (0,0) -- (0,38.0) node [left] {$s$};
+    \draw[smooth, red, dotted, thin] (0,34) -- (112,34);
+    \draw[smooth, blue, dotted, thin] (0,34) node [left] {Mexiko} -- (56,34);
+    \draw[smooth, red, dotted, thin] (112,34) -- (112,-1) node [below] {$t_O$};
+    \draw[smooth, blue, dotted, thin] (56,34) -- (56,-1) node [below] {$t_P$};
+    \draw[<->, >=latex] (56,-10) -- node[above] {$\Delta t$} (112,-10);
+    %\draw (-15*0.3,pi/2) -- (-18*0.3,0);
+    %\draw[red, thin] (5*pi/4*0.6,2*0.3) -- (5*pi/4*0.6,1);
+    %\draw[red, thin] (9*pi/4*0.6,2*0.3) -- (9*pi/4*0.6,1);
+    %\draw[<->, >=latex, red] (5*pi/4*0.6,3*0.3) -- node [above] {$T$} (9*pi/4*0.6,3*0.3) ;
+  \end{tikzpicture}
+}
+}
+
+\frame
+{
 \textbf{Lösung:}
   \begin{tikzpicture}[scale = 0.07]
 	\draw[smooth, red,] (0,0) -- node [above, rotate=17] {$v_O=\SI{3}{\kilo\meter\per\second}$} (112,34.0);
@@ -325,15 +354,5 @@ v=\lambda\cdot f=\SI{3,7}{\centi\meter}\cdot\SI{40000}{\hertz}=\SI{0,037}{\meter
 t=\dfrac{s}{v}\quad\Rightarrow \quad \Delta t&=t_O-t_P=\dfrac{s}{v_O}-\dfrac{s}{v_P}=\dfrac{\SI{340}{\kilo\meter}}{\SI{3}{\kilo\meter\per\second}}-\dfrac{\SI{340}{\kilo\meter}}{\SI{6}{\kilo\meter\per\second}}\\
 &=\dfrac{170}{3}\si{\second}\approx\SI{56,7}{\second}
 \end{align*}
-}
-
-\frame[allowframebreaks]
-{
-\frametitle{Interferenz}
-Ausblick
-	\begin{figure}
-	\href{file:///home/heikoneu/Dokumente/Gnuplot/interferenz.gif}{Animation starten}
-	\caption{Interferenz mittels Gnuplot}
-	\end{figure}
 }
 \end{document}
